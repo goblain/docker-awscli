@@ -6,8 +6,5 @@ RUN apk upgrade --no-cache --available \
     && apk del --purge py-pip py-setuptools \
     && adduser -D user
 
-USER user
-WORKDIR /home/user
-
 ENTRYPOINT ["aws"]
 CMD ["help"]
